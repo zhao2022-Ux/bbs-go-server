@@ -1,1 +1,6 @@
-BBSGO_ENV=prod pm2 start ./bbs-go --name bbs-go-server
+#!/bin/sh
+
+export BBSGO_ENV=${BBSGO_ENV:-prod}
+export PORT=${PORT:-8082}
+
+./bbs-go
